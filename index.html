@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Job-O-Hire - Connect Indian talent with Japanese companies</title>
+<meta name="description" content="Job-O-Hire connects Japanese companies with skilled Indian students and graduates for internships and full-time roles. Success-based hiring, no upfront fees.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Departure+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { display:['"Instrument Sans"','sans-serif'], sans:['"Geist"','sans-serif'], mono:['"Departure Mono"','monospace'] },
+        colors: {
+          bg:'#ffffff', surface:'#f4f4f4', ink:'#151514', muted:'#6b6b6b', line:'#e6e6e6', accent:'#f76808'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:#ffffff;color:#151514;font-family:Geist,sans-serif;overflow-x:hidden}
+  ::-webkit-scrollbar{display:none} *{scrollbar-width:none}
+  .card{background:#f4f4f4;border:1px solid #e6e6e6;border-radius:6px;transition:transform .3s ease,box-shadow .3s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(21,21,20,.08)}
+  .btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .875rem;border-radius:6px;font-weight:500;font-size:.8125rem;transition:all .2s ease;cursor:pointer;white-space:nowrap}
+  .btn-primary{background:#151514;color:#fff;box-shadow:inset 0 0 0 1px #151514}
+  .btn-primary:hover{opacity:.85}
+  .btn-ghost{background:#fff;color:#151514;border:1px solid #e6e6e6}
+  .btn-ghost:hover{background:#f4f4f4}
+  .label{font-family:'Departure Mono',monospace;font-size:11px;letter-spacing:.6px;color:#f76808;text-transform:uppercase}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+  .container{max-width:1132px;margin:0 auto;padding:0 1.5rem}
+  @media(min-width:768px){.container{padding:0 2rem}}
+  html.light{filter:invert(1) hue-rotate(180deg)}
+  html.light img, html.light video{filter:invert(1) hue-rotate(180deg)}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-line">
+  <div class="container flex items-center justify-between h-14">
+    <a href="#top" class="flex items-center gap-2">
+<div class="flex items-center gap-2"><div style="width:20px;height:20px;display:grid;grid-template-columns:repeat(3,6.67px);grid-template-rows:repeat(3,6.67px);flex-shrink:0"><div style="background:#151514;opacity:.3"></div><div style="background:#151514;opacity:.2"></div><div style="background:#151514;opacity:.1"></div><div style="background:#151514;opacity:.4"></div><div style="background:#151514;opacity:.9"></div><div style="background:#151514;opacity:.8"></div><div style="background:#151514;opacity:.5"></div><div style="background:#151514;opacity:.6"></div><div style="background:#151514;opacity:.7"></div></div><span style="font-family:Geist,sans-serif;font-size:18px;line-height:22px;color:#151514;white-space:nowrap"><span style="font-weight:400">Job</span><span style="font-weight:600">-O-Hire</span></span></div>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-muted">
+      <a href="#challenge" class="hover:text-ink transition">Challenge</a>
+      <a href="#services" class="hover:text-ink transition">Services</a>
+      <a href="#process" class="hover:text-ink transition">How it works</a>
+      <a href="#candidates" class="hover:text-ink transition">Candidates</a>
+      <a href="#fees" class="hover:text-ink transition">Fees</a>
+      <a href="#about" class="hover:text-ink transition">About</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="themeToggle" class="btn btn-ghost !py-1.5 !px-2.5" aria-label="Toggle theme"><i data-lucide="moon" class="w-4 h-4"></i></button>
+      <button id="mobileMenuBtn" class="md:hidden btn btn-ghost !py-1.5 !px-2.5" aria-label="Menu"><i data-lucide="menu" class="w-4 h-4"></i></button>
+      <a href="#contact" class="hidden sm:inline-flex btn btn-primary">Become a hiring partner</a>
+    </div>
+  </div>
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden fixed inset-0 z-40 bg-white md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-line">
+<div class="flex items-center gap-2"><div style="width:20px;height:20px;display:grid;grid-template-columns:repeat(3,6.67px);grid-template-rows:repeat(3,6.67px);flex-shrink:0"><div style="background:#151514;opacity:.3"></div><div style="background:#151514;opacity:.2"></div><div style="background:#151514;opacity:.1"></div><div style="background:#151514;opacity:.4"></div><div style="background:#151514;opacity:.9"></div><div style="background:#151514;opacity:.8"></div><div style="background:#151514;opacity:.5"></div><div style="background:#151514;opacity:.6"></div><div style="background:#151514;opacity:.7"></div></div><span style="font-family:Geist,sans-serif;font-size:18px;line-height:22px;color:#151514;white-space:nowrap"><span style="font-weight:400">Job</span><span style="font-weight:600">-O-Hire</span></span></div>
+      <button id="mobileMenuClose" class="btn btn-ghost !py-1.5 !px-2.5" aria-label="Close"><i data-lucide="x" class="w-4 h-4"></i></button>
+    </div>
+    <div class="flex flex-col items-center justify-center h-[calc(100%-64px)] gap-5 text-lg">
+      <a href="#challenge" class="mobile-link hover:text-ink text-muted">Challenge</a>
+      <a href="#services" class="mobile-link hover:text-ink text-muted">Services</a>
+      <a href="#process" class="mobile-link hover:text-ink text-muted">How it works</a>
+      <a href="#candidates" class="mobile-link hover:text-ink text-muted">Candidates</a>
+      <a href="#fees" class="mobile-link hover:text-ink text-muted">Fees</a>
+      <a href="#about" class="mobile-link hover:text-ink text-muted">About</a>
+      <a href="#contact" class="mobile-link btn btn-primary mt-4">Become a hiring partner</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative py-20 md:py-32">
+  <div class="container text-center">
+    <div class="label mb-6">For Japanese Employers</div>
+    <h1 class="font-display font-medium text-4xl md:text-6xl leading-[1.05] tracking-tight max-w-4xl mx-auto">
+      Connect Indian talent <span class="italic">with Japanese companies.</span>
+    </h1>
+    <p class="mt-6 text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+      Job-O-Hire bridges Indian universities and Japanese employers — helping you hire skilled IT, engineering and manufacturing graduates for internships and full-time roles. No upfront fees. Success-based hiring.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-3 justify-center">
+      <a href="#contact" class="btn btn-primary">Become a hiring partner <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      <a href="#process" class="btn btn-ghost">See how it works</a>
+    </div>
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-line rounded-xl overflow-hidden border border-line">
+      <div class="bg-white p-6 text-center"><div class="font-display text-3xl font-medium">0</div><div class="text-xs text-muted mt-1">Upfront fees</div></div>
+      <div class="bg-white p-6 text-center"><div class="font-display text-3xl font-medium">6</div><div class="text-xs text-muted mt-1">Institution types</div></div>
+      <div class="bg-white p-6 text-center"><div class="font-display text-3xl font-medium">2</div><div class="text-xs text-muted mt-1">Hiring routes</div></div>
+      <div class="bg-white p-6 text-center"><div class="font-display text-3xl font-medium">100%</div><div class="text-xs text-muted mt-1">Online sourcing</div></div>
+    </div>
+    <div class="mt-12 card p-4 md:p-6 overflow-hidden">
+      <div class="aspect-[16/9] rounded-md bg-surface border border-line flex items-center justify-center text-muted text-sm">Workspace preview</div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE AND AFTER -->
+<section class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="label mb-4">Before and after</div>
+    <h2 class="font-display font-medium text-3xl md:text-5xl mb-10">From scattered hiring channels to one source of truth.</h2>
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="card p-6 md:p-8">
+        <div class="label mb-4" style="color:#6b6b6b">Before</div>
+        <ul class="space-y-3 text-muted">
+          <li>Multiple university contacts to manage</li>
+          <li>Resumes scattered across email and spreadsheets</li>
+          <li>No visibility into candidate status</li>
+          <li>Language and eligibility checks done manually</li>
+          <li>Fees and terms agreed ad-hoc</li>
+        </ul>
+      </div>
+      <div class="card p-6 md:p-8 border-ink">
+        <div class="label mb-4">After</div>
+        <ul class="space-y-3 text-ink/80">
+          <li>One platform, one connection to Indian campuses</li>
+          <li>Unified candidate profiles with video and skills</li>
+          <li>Clear pipeline from introduction to hiring</li>
+          <li>Language requirements stated per posting</li>
+          <li>Success-based, agreed hiring terms</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE -->
+<section id="challenge" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="label mb-4">The challenge</div>
+        <h2 class="font-display font-medium text-3xl md:text-5xl leading-tight">Japan is running short of engineers.</h2>
+        <p class="mt-5 text-muted text-lg leading-relaxed">According to estimates from Japan's Ministry of Economy, Trade and Industry (METI), Japan could face a significant shortage of IT professionals by 2030. Manufacturing and engineering companies face the same recruitment pressure.</p>
+        <p class="mt-4 text-muted text-lg leading-relaxed">Job-O-Hire connects that hiring need with skilled Indian students and recent graduates — engineers who want to work in Japan but lack the right platform or connection.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://www.meti.go.jp/" target="_blank" rel="noopener" class="btn btn-ghost">METI workforce research <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i></a>
+          <a href="#contact" class="btn btn-ghost">Talk to us</a>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-3 reveal">
+        <div class="card p-6"><div class="font-display text-3xl font-medium">2030</div><p class="mt-2 text-sm text-muted">Year Japan faces a major shortage of IT, manufacturing & engineering professionals.</p></div>
+        <div class="card p-6"><div class="font-display text-3xl font-medium">6</div><p class="mt-2 text-sm text-muted">Institution types we collaborate with across India.</p></div>
+        <div class="card p-6"><div class="font-display text-3xl font-medium">0¥</div><p class="mt-2 text-sm text-muted">Upfront cost to post jobs, source and screen candidates.</p></div>
+        <div class="card p-6"><div class="font-display text-3xl font-medium">100%</div><p class="mt-2 text-sm text-muted">Online sourcing & selection — recruit while staying in Japan.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="max-w-3xl mb-12 reveal">
+      <div class="label mb-4">Service overview</div>
+      <h2 class="font-display font-medium text-3xl md:text-5xl">A clear way to build your team.</h2>
+      <p class="mt-4 text-muted text-lg">Your company sets the eligibility, language needs, selection process and final offer. Job-O-Hire provides the recruitment connection and agreed support.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="users" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Candidate introduction</h3><p class="mt-2 text-muted text-sm leading-relaxed">Reach students and graduates whose background matches your stated needs.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="layout-grid" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Job & internship posts</h3><p class="mt-2 text-muted text-sm leading-relaxed">Describe the work, eligibility, location, dates and application deadline.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="search" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Profile-based screening</h3><p class="mt-2 text-muted text-sm leading-relaxed">Review education, skills, projects, resumes and supporting documents.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="list-checks" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Flexible selection</h3><p class="mt-2 text-muted text-sm leading-relaxed">Choose an optional assessment and one or more interview rounds.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="building-2" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">College connections</h3><p class="mt-2 text-muted text-sm leading-relaxed">Connect with Training & Placement cells at collaborating institutions.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="trending-up" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Internship to employment</h3><p class="mt-2 text-muted text-sm leading-relaxed">Consider a full-time offer after reviewing the intern's performance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CANDIDATES -->
+<section id="candidates" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="label mb-4">Candidate profiles</div>
+        <h2 class="font-display font-medium text-3xl md:text-5xl leading-tight">Understand the person behind the application.</h2>
+        <p class="mt-5 text-muted text-lg leading-relaxed">Every profile is built to help you decide fast — academics, skills, projects and a short introduction video, all in one place.</p>
+        <ul class="mt-7 space-y-3">
+          <li class="flex gap-3 items-start"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ink flex-shrink-0"></span><span class="text-ink/80"><b class="text-ink">Resume & academics</b> — education, graduation year, relevant experience and achievements.</span></li>
+          <li class="flex gap-3 items-start"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ink flex-shrink-0"></span><span class="text-ink/80"><b class="text-ink">Short introduction video</b> — motivation, interests and communication skills.</span></li>
+          <li class="flex gap-3 items-start"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ink flex-shrink-0"></span><span class="text-ink/80"><b class="text-ink">Skills & projects</b> — technical abilities, practical work and project examples.</span></li>
+          <li class="flex gap-3 items-start"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ink flex-shrink-0"></span><span class="text-ink/80"><b class="text-ink">Language documents</b> — JLPT or NAT certificates, where available or required.</span></li>
+        </ul>
+        <p class="mt-6 text-muted text-sm">Japanese-language requirements are your choice — required, preferred, or not required. State the expected level in the posting.</p>
+      </div>
+      <div class="reveal">
+        <div class="card p-6">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-12 h-12 rounded-md bg-ink text-white flex items-center justify-center font-medium">AS</div>
+            <div>
+              <div class="font-medium">Aarav Sharma</div>
+              <div class="text-xs text-muted">B.Tech Computer Science · IIT Dhanbad · 2028</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-sm">
+            <div class="bg-white rounded-md p-3 border border-line"><div class="text-muted text-xs">Skills</div><div class="mt-1">C++, Python, React</div></div>
+            <div class="bg-white rounded-md p-3 border border-line"><div class="text-muted text-xs">Japanese</div><div class="mt-1">JLPT N3</div></div>
+            <div class="bg-white rounded-md p-3 border border-line"><div class="text-muted text-xs">Projects</div><div class="mt-1">3 shipped</div></div>
+            <div class="bg-white rounded-md p-3 border border-line"><div class="text-muted text-xs">Video</div><div class="mt-1 text-accent">▶ 45s intro</div></div>
+          </div>
+          <div class="mt-3 h-20 rounded-md bg-surface flex items-center justify-center text-muted text-sm border border-line">Resume · GitHub · Skills · Notes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="max-w-3xl mb-12 reveal">
+      <div class="label mb-4">From introduction to hiring</div>
+      <h2 class="font-display font-medium text-3xl md:text-5xl">Your hiring process at a glance.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div class="card p-6 reveal"><div class="label mb-3">01</div><h3 class="font-display font-medium text-lg">Publish a job or internship</h3><p class="mt-2 text-muted text-sm">State the work, eligibility, language needs and application deadline.</p></div>
+      <div class="card p-6 reveal"><div class="label mb-3">02</div><h3 class="font-display font-medium text-lg">Receive eligible applications</h3><p class="mt-2 text-muted text-sm">Candidates who meet your requirements apply before the deadline.</p></div>
+      <div class="card p-6 reveal"><div class="label mb-3">03</div><h3 class="font-display font-medium text-lg">Screen profiles & documents</h3><p class="mt-2 text-muted text-sm">Review resumes, videos, skills, projects and relevant certificates.</p></div>
+      <div class="card p-6 reveal"><div class="label mb-3">04</div><h3 class="font-display font-medium text-lg">Optional assessment or direct invite</h3><p class="mt-2 text-muted text-sm">Email a test link, or skip the assessment and invite screened candidates to interview.</p></div>
+      <div class="card p-6 reveal"><div class="label mb-3">05</div><h3 class="font-display font-medium text-lg">Hold interviews</h3><p class="mt-2 text-muted text-sm">Conduct one or more interviews, as your company decides.</p></div>
+      <div class="card p-6 reveal"><div class="label mb-3">06</div><h3 class="font-display font-medium text-lg">Make an offer</h3><p class="mt-2 text-muted text-sm">Confirm the role, terms and start date with successful candidates.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLEGE INTEGRATION -->
+<section id="college" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="card p-8 md:p-12 reveal">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="label mb-4">College integration</div>
+          <h2 class="font-display font-medium text-3xl md:text-4xl">One bridge between campus and company.</h2>
+          <p class="mt-4 text-muted leading-relaxed">A Training & Placement (T&P) cell is the college team that keeps in touch with employers and helps students find internships and jobs. We coordinate with these cells at collaborating institutions.</p>
+          <div class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
+            <div class="bg-white rounded-md p-4 text-center border border-line"><div class="font-medium">Your company</div><div class="text-muted text-xs mt-1">Posts the role & defines eligibility</div></div>
+            <div class="bg-white rounded-md p-4 text-center border border-line"><div class="font-medium">Job-O-Hire</div><div class="text-muted text-xs mt-1">Connects employers with eligible students</div></div>
+            <div class="bg-white rounded-md p-4 text-center border border-line"><div class="font-medium">College T&P</div><div class="text-muted text-xs mt-1">Keeps students informed & records</div></div>
+          </div>
+        </div>
+        <div>
+          <p class="text-ink font-medium mb-3">Our institutional reach</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">IITs</span>
+            <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">NITs</span>
+            <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">IIITs</span>
+            <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">BITS</span>
+            <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">IIMs</span>
+            <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">Other reputed institutions</span>
+          </div>
+          <p class="mt-5 text-muted text-sm">This connection supports hiring before graduation, while respecting student availability, academic calendars and each institution's placement rules.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLEXIBLE HIRING -->
+<section id="flexible" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="max-w-3xl mb-12 reveal">
+      <div class="label mb-4">Flexible hiring</div>
+      <h2 class="font-display font-medium text-3xl md:text-5xl">Start with an internship or hire full-time.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="card p-6 md:p-8 reveal">
+        <h3 class="font-display font-medium text-2xl">Internship → full-time pathway</h3>
+        <p class="mt-3 text-muted leading-relaxed">Work together on real tasks and review skills, teamwork and progress. High-performing interns may receive a full-time offer.</p>
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+          <span class="px-3 py-1.5 rounded-md bg-white border border-line">Internship</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-muted"></i>
+          <span class="px-3 py-1.5 rounded-md bg-white border border-line">Performance review</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-muted"></i>
+          <span class="px-3 py-1.5 rounded-md bg-white border border-line">Possible full-time offer</span>
+        </div>
+        <p class="mt-5 text-muted text-xs">A full-time offer depends on performance, business needs and mutually agreed terms.</p>
+      </div>
+      <div class="card p-6 md:p-8 reveal">
+        <h3 class="font-display font-medium text-2xl">Direct full-time recruitment</h3>
+        <p class="mt-3 text-muted leading-relaxed">Hire eligible recent graduates or students approaching graduation through screening, an optional assessment and interviews. A prior internship is not required.</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">Eligibility by batch, degree, branch</span>
+          <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">On-site in Japan or remote</span>
+          <span class="px-3 py-1.5 rounded-md bg-white border border-line text-sm">Language requirements your choice</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section id="fees" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="max-w-3xl mb-12 reveal">
+      <div class="label mb-4">Hiring terms & fees</div>
+      <h2 class="font-display font-medium text-3xl md:text-5xl">Success-based hiring. No upfront fees.</h2>
+      <p class="mt-4 text-muted text-lg">No fees for collaboration, job postings, sourcing, screening or interviews before a candidate is selected. Fees apply only after successful selection.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-3">
+      <div class="card p-6 reveal"><div class="label mb-3">Internship hiring</div><div class="font-display text-3xl font-medium">¥17,000 min</div><p class="mt-2 text-muted text-sm">or 10% of the entire internship stipend — whichever is higher.</p><ul class="mt-5 space-y-1.5 text-sm text-muted"><li>· Full fee payable within 7 days of selection</li><li>· Unpaid internship: ¥17,000 paid directly</li><li>· Taxes & duties additional</li></ul></div>
+      <div class="card p-6 reveal border-ink"><div class="label mb-3">PPO hiring</div><div class="font-display text-3xl font-medium">1.5% of CTC</div><p class="mt-2 text-muted text-sm">Full-time offer to a high-performing intern after internship.</p><ul class="mt-5 space-y-1.5 text-sm text-muted"><li>· 50% on selection / offer acceptance</li><li>· 50% after candidate joins</li><li>· Each within 7 days</li></ul></div>
+      <div class="card p-6 reveal"><div class="label mb-3">Full-time hiring</div><div class="font-display text-3xl font-medium">3% of CTC</div><p class="mt-2 text-muted text-sm">Direct full-time recruitment of eligible graduates.</p><ul class="mt-5 space-y-1.5 text-sm text-muted"><li>· 50% on selection / offer acceptance</li><li>· 50% after candidate joins</li><li>· Each within 7 days</li></ul></div>
+    </div>
+    <div class="mt-6 card p-6 text-sm text-muted reveal">
+      <b class="text-ink">CTC adjustment mechanism:</b> the applicable hiring fee is adjusted from the total compensation package proposed for the candidate, before the final offer is agreed (subject to applicable law). Applicable taxes and duties are paid separately by the Hiring Company. All commercial terms are strictly confidential.
+    </div>
+    <p class="mt-4 text-center text-muted text-xs">Terms apply to employers partnering on or before 31 Dec 2026; valid for at least one year. A new structure releases 1 Jan 2027.</p>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="max-w-3xl mb-12 reveal">
+      <div class="label mb-4">Trust & process</div>
+      <h2 class="font-display font-medium text-3xl md:text-5xl">Rock-solid process, everywhere.</h2>
+      <p class="mt-4 text-muted text-lg">Stay protected and connected — no upfront charges, success-based fees, confidential terms, and a single point of contact from sourcing to hiring.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-3">
+      <div class="card p-6 text-center reveal"><div class="font-display text-4xl font-medium">0¥</div><div class="mt-2 text-sm text-muted">Upfront fees</div></div>
+      <div class="card p-6 text-center reveal"><div class="font-display text-4xl font-medium">24/7</div><div class="mt-2 text-sm text-muted">Online sourcing & support</div></div>
+      <div class="card p-6 text-center reveal"><div class="font-display text-4xl font-medium">100%</div><div class="mt-2 text-sm text-muted">Confidential terms</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTITUTIONS MARQUEE -->
+<section class="relative py-12 border-t border-line overflow-hidden">
+  <div class="container mb-6 text-center reveal">
+    <p class="text-muted text-sm">Collaborating with premier engineering & management institutions across India</p>
+  </div>
+  <div class="flex gap-10 whitespace-nowrap text-2xl font-display font-medium text-muted/60" style="animation: marq 30s linear infinite">
+    <span>IITs</span><span>·</span><span>NITs</span><span>·</span><span>IIITs</span><span>·</span><span>BITS</span><span>·</span><span>IIMs</span><span>·</span><span>Reputed government & private institutions</span><span>·</span>
+    <span>IITs</span><span>·</span><span>NITs</span><span>·</span><span>IIITs</span><span>·</span><span>BITS</span><span>·</span><span>IIMs</span><span>·</span><span>Reputed government & private institutions</span><span>·</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="label mb-4">Who we are</div>
+        <h2 class="font-display font-medium text-3xl md:text-5xl leading-tight">An India–Japan talent connection.</h2>
+        <p class="mt-5 text-muted text-lg leading-relaxed">Founded by Rupesh Jahagirdar, a Master's student in Engineering at IIT Dhanbad. Job-O-Hire connects Indian students and graduates with internship and full-time opportunities at Japanese companies.</p>
+        <blockquote class="mt-7 border-l-2 border-line pl-5 text-ink/80 italic leading-relaxed">"Talent in India lives in every street and small town, but many talented students never get a chance to apply and reach global companies. Japan needs skilled engineers, and many Indian students want to work there — but they don't have the right platform or connection. Job-O-Hire is my way to build that bridge."</blockquote>
+        <p class="mt-5 text-muted leading-relaxed">Our purpose: help companies find suitable people and help young talent access opportunities beyond their location or reach.</p>
+      </div>
+      <div class="reveal">
+        <div class="card p-8">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-md bg-ink text-white flex items-center justify-center font-medium text-2xl">RJ</div>
+            <div>
+              <div class="font-display font-medium text-xl">Rupesh Jahagirdar</div>
+              <div class="text-sm text-muted">Founder · IIT Dhanbad</div>
+            </div>
+          </div>
+          <div class="mt-6 space-y-3 text-sm">
+            <div class="flex justify-between border-b border-line pb-2"><span class="text-muted">Focus</span><span class="text-ink">India–Japan hiring</span></div>
+            <div class="flex justify-between border-b border-line pb-2"><span class="text-muted">Reach</span><span class="text-ink">IITs, NITs, IIITs, BITS, IIMs</span></div>
+            <div class="flex justify-between border-b border-line pb-2"><span class="text-muted">Routes</span><span class="text-ink">Internship & full-time</span></div>
+            <div class="flex justify-between"><span class="text-muted">Model</span><span class="text-ink">Success-based fees</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY BENTO -->
+<section id="security" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="max-w-3xl mb-12 reveal">
+      <div class="label mb-4">Trust &amp; process</div>
+      <h2 class="font-display font-medium text-3xl md:text-5xl">Open to talent. Closed to chaos.</h2>
+      <p class="mt-4 text-muted text-lg">Permissions are explicit. Every revision has a history, every approval has an owner, and your work remains yours.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Read</h3><p class="mt-2 text-muted text-sm">Local context can stay local.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="check-circle" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Approve</h3><p class="mt-2 text-muted text-sm">Every approval has an owner.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="history" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Restore</h3><p class="mt-2 text-muted text-sm">Every revision has a history.</p></div>
+      <div class="card p-6 reveal"><div class="w-10 h-10 rounded-md bg-ink text-white flex items-center justify-center mb-4"><i data-lucide="lock" class="w-5 h-5"></i></div><h3 class="font-display font-medium text-xl">Safe to invite</h3><p class="mt-2 text-muted text-sm">Choose who can read, suggest, edit, publish, or share.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="relative py-16 md:py-24 border-t border-line">
+  <div class="container">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-4"><div style="width:36px;height:36px;display:grid;grid-template-columns:repeat(3,12px);grid-template-rows:repeat(3,12px);flex-shrink:0"><div style="background:#151514;opacity:.3"></div><div style="background:#151514;opacity:.2"></div><div style="background:#151514;opacity:.1"></div><div style="background:#151514;opacity:.4"></div><div style="background:#151514;opacity:.9"></div><div style="background:#151514;opacity:.8"></div><div style="background:#151514;opacity:.5"></div><div style="background:#151514;opacity:.6"></div><div style="background:#151514;opacity:.7"></div></div><div class="label">Become a hiring partner</div></div>
+        <h2 class="font-display font-medium text-3xl md:text-5xl leading-tight">Bring everyone<br/>to the <span class="italic">same page.</span></h2>
+        <p class="mt-5 text-muted text-lg leading-relaxed">If your organization is interested, let us know. We'll prepare recruiter login credentials for your team. A view-only account can be arranged to explore the platform and review candidate profiles.</p>
+        <div class="mt-7 space-y-3 text-ink/80">
+          <div class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-muted"></i> collaborations@jobohire.com</div>
+          <div class="flex items-center gap-3"><i data-lucide="globe" class="w-4 h-4 text-muted"></i> www.jobohire.com</div>
+          <div class="flex items-center gap-3"><i data-lucide="link-2" class="w-4 h-4 text-muted"></i> linkedin.com/company/job-o-hire</div>
+        </div>
+        <p class="mt-6 text-muted text-sm">Companies can explore the platform at no cost — no upfront charges for job postings, candidate sourcing, screening or interviews, subject to mutually agreed hiring terms.</p>
+      </div>
+      <form class="card p-6 md:p-8 reveal" onsubmit="event.preventDefault();alert('Thanks! We will get back to you.');">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div><label class="text-xs text-muted">Company name</label><input class="mt-1 w-full bg-white border border-line rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-ink" placeholder="Acme Corp" required></div>
+          <div><label class="text-xs text-muted">Contact person</label><input class="mt-1 w-full bg-white border border-line rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-ink" placeholder="Your name" required></div>
+          <div><label class="text-xs text-muted">Role / hiring type</label><select class="mt-1 w-full bg-white border border-line rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-ink"><option>Internship</option><option>PPO (Pre-Placement Offer)</option><option>Full-time</option></select></div>
+          <div><label class="text-xs text-muted">Eligibility / batch</label><input class="mt-1 w-full bg-white border border-line rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-ink" placeholder="e.g. 2028 graduates"></div>
+          <div><label class="text-xs text-muted">Language needs</label><input class="mt-1 w-full bg-white border border-line rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-ink" placeholder="JLPT N3 or not required"></div>
+          <div><label class="text-xs text-muted">Location</label><input class="mt-1 w-full bg-white border border-line rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-ink" placeholder="On-site Japan / Remote"></div>
+        </div>
+        <div class="mt-4"><label class="text-xs text-muted">Preferred timeline</label><input class="mt-1 w-full bg-white border border-line rounded-md px-3 py-2.5 text-sm focus:outline-none focus:border-ink" placeholder="e.g. Q2 2026"></div>
+        <button type="submit" class="btn btn-primary w-full justify-center mt-6">Send enquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative py-12 border-t border-line bg-surface">
+  <div class="container">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-2"><div style="width:20px;height:20px;display:grid;grid-template-columns:repeat(3,6.67px);grid-template-rows:repeat(3,6.67px);flex-shrink:0"><div style="background:#151514;opacity:.3"></div><div style="background:#151514;opacity:.2"></div><div style="background:#151514;opacity:.1"></div><div style="background:#151514;opacity:.4"></div><div style="background:#151514;opacity:.9"></div><div style="background:#151514;opacity:.8"></div><div style="background:#151514;opacity:.5"></div><div style="background:#151514;opacity:.6"></div><div style="background:#151514;opacity:.7"></div></div><span style="font-family:Geist,sans-serif;font-size:18px;line-height:22px;color:#151514;white-space:nowrap"><span style="font-weight:400">Job</span><span style="font-weight:600">-O-Hire</span></span></div>
+      <div class="text-muted text-sm">© 2026 — Job-O-Hire. All rights reserved.</div>
+      <div class="flex gap-4 text-muted text-sm">
+        <a href="mailto:collaborations@jobohire.com" class="hover:text-ink">Email</a>
+        <a href="https://www.jobohire.com" target="_blank" rel="noopener" class="hover:text-ink">Website</a>
+        <a href="https://linkedin.com/company/job-o-hire" target="_blank" rel="noopener" class="hover:text-ink">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  // theme
+  const __toggle = document.getElementById("themeToggle");
+  const __applyTheme = (light) => {
+    document.documentElement.classList.toggle("light", light);
+    if (__toggle) { __toggle.innerHTML = light ? '<i data-lucide="sun" class="w-4 h-4"></i>' : '<i data-lucide="moon" class="w-4 h-4"></i>'; }
+    try { localStorage.setItem("theme", light ? "light" : "dark"); } catch(e){}
+  };
+  let __isLight = false;
+  try { __isLight = localStorage.getItem("theme") === "light"; } catch(e){}
+  __applyTheme(__isLight);
+  if (__toggle) { __toggle.addEventListener("click", () => { __applyTheme(!document.documentElement.classList.contains("light")); lucide.createIcons(); }); }
+  // mobile menu
+  const __mmBtn = document.getElementById("mobileMenuBtn");
+  const __mm = document.getElementById("mobileMenu");
+  const __mmClose = document.getElementById("mobileMenuClose");
+  if (__mmBtn && __mm) {
+    __mmBtn.addEventListener("click", () => __mm.classList.toggle("hidden"));
+    if (__mmClose) __mmClose.addEventListener("click", () => __mm.classList.add("hidden"));
+    __mm.querySelectorAll(".mobile-link").forEach(a => a.addEventListener("click", () => __mm.classList.add("hidden")));
+  }
+  lucide.createIcons();
+  // reveal
+  const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // marquee keyframes
+</script>
+<style>@keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+</body>
+</html>

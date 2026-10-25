@@ -1,0 +1,10 @@
+{
+  "name": "job-o-hire",
+  "version": "1.0.0",
+  "description": "Job-O-Hire landing website",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "dev": "python -m http.server 3000"
+  },
+  "private": true
+}
